@@ -1,0 +1,17 @@
+<div class="container text-center">
+  <div class="myClass">Hello^^</div>
+  <br>
+  <div class="row">
+    <div *ngFor="let product of products" class="col">
+      <a [routerLink]="['detail']">
+        <div class="card">
+          <img src="../../assets/img/placeholder-image.png" class="card-img-top" alt="...">
+          <div class="card-body">
+            <p class="card-text">product#{{ product }}</p>
+          </div>
+        </div>
+      </a>
+    </div>
+  </div>
+</div>
+<br>
