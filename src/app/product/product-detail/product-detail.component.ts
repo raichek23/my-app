@@ -9,10 +9,12 @@ import { products } from '../../products';
 })
 export class ProductDetailComponent implements OnInit {
   product: any;
+  products: any;
 
   constructor(private route: ActivatedRoute) { }
 
   ngOnInit(): void {
+    this.products = products
     this.route.paramMap.subscribe(params => {
       this.product = products[+params.get('productId')!]
     })
